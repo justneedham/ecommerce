@@ -1,0 +1,221 @@
+/*
+**********************************************
+Header Adjustments CSS
+**********************************************
+ */
+
+.header {
+    height: 98vw;
+}
+
+.gradient-background {
+    /*min-height: 65vw;*/
+}
+
+.a-graphic-background {
+    min-height: 98vw;
+}
+
+.header-wrapper {
+    top: -99vw;
+}
+
+
+/*
+**********************************************
+Cart CSS
+**********************************************
+ */
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    margin: 0;
+}
+
+.cart-container {
+    background-color: #ffffff;
+    margin: 0 3vw;
+    border-radius: 0.5vw;
+    padding: 1vw 4vw;
+}
+
+/***Header Text***/
+.cart-header {
+    border-bottom-style: solid;
+    border-width: 0.1vw;
+    justify-content: space-between;
+    padding-bottom: 1vw;
+}
+
+.cart-header-text {
+    font-size: 3vw;
+}
+
+.header-text-item {
+    width: 40vw;
+    margin-left: 4vw;
+    text-align: center;
+}
+
+.header-text-qty {
+    width: 8vw;
+    text-align: center;
+}
+
+.header-text-total {
+    width: 8vw;
+    margin-right: 4vw;
+}
+
+.cart-item {
+    max-height: 20vw;
+    justify-content: space-between;
+}
+
+.header-content-container {
+    grid-area: main;
+}
+
+.item-container {
+    width: 40vw;
+    margin-left: 4vw;
+}
+
+.item-text-container {
+    flex-direction: column;
+    max-height: 15vw;
+    width: 30vw;
+    margin: auto;
+}
+
+.qty-pill {
+    width: 8vw;
+}
+
+.item-price {
+    margin: auto 0;
+    font-weight: normal;
+    font-size: 2vw;
+    width: 8vw;
+    margin-right: 4vw;
+}
+
+.item-img {
+    max-width: 10vw;
+    margin: auto 2vw auto auto;
+
+}
+
+/***ItemTextDetail***/
+
+.book-cart-text {
+    font-size: 2vw;
+}
+
+.book-cart-title {
+    font-weight: normal;
+}
+
+.book-cart-author {
+
+}
+
+.book-cart-version {
+    font-size: 1.5vw;
+}
+
+.book-cart-purchase-type {
+    font-weight: normal;
+    font-size: 1.5vw;
+}
+
+/***Pill CSS***/
+
+.qty-pill {
+    margin: auto 0;
+    border-style: solid;
+    border-color: #5155C9;
+    border-width: 0.1vw;
+    border-radius: 0.5vw;
+}
+
+.pill-component {
+    width: 3vw;
+    height: 3vw;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.pill-number {
+    text-align: center;
+    font-family: "Avenir Next", sans-serif;
+
+}
+
+.pill-button {
+    background-color: #5155C9;
+    border-style: solid;
+    border-color: #5155C9;
+    font-size: 2vw;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+
+.pill-button--minus {
+    border-radius: 0.4vw 0 0 0.4vw;
+
+}
+
+.pill-button--plus {
+   border-radius: 0 0.4vw 0.4vw 0;
+}
+
+
+/****Footer*****/
+.cart-footer {
+    border-top-style: solid;
+    border-width: 0.1vw;
+    justify-content: flex-end;
+    padding: 2vw 0;
+}
+
+.header-text-subtotal-label {
+    width: 12vw;
+    margin-right: 6vw;
+}
+
+.header-text-subtotal-number {
+    margin-right: 4vw;
+}
+
+/****Buttons*****/
+.cart-buttons {
+    justify-content: center;
+    margin-bottom: 2vw;
+}
+
+.purple-button-shop {
+    margin-right: 1vw;
+    text-decoration: none;
+}
+
+.purple-button-checkout {
+    margin-left: 1vw;
+    text-decoration: none;
+}
+
+
+
+
+
+

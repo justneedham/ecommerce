@@ -1,0 +1,469 @@
+/*
+**********************************************
+Base CSS
+**********************************************
+ */
+
+.control {
+    display: none;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0 5vw;
+}
+
+.input {
+    border-style: hidden;
+    text-align: center;
+}
+
+.label {
+    display: none;
+}
+
+.text {
+    font-family: Avenir Next, sans-serif;
+    font-weight: lighter;
+    font-size: 1.5vw;
+    margin: 0;
+    color: #4A4A4A;
+}
+
+.text-block {
+    margin-bottom: 2vw;
+}
+
+.text-box {
+    background: #ffffff;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 3vw;
+    color: #4A4A4A;
+    font-weight: lighter;
+    border-radius: 0.6vw;
+}
+
+.content-block {
+    margin: 1vw;
+    padding: 1vw;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/****BaseInputs******/
+
+.line-input {
+    border-style: none none solid none;
+    border-width: 0.1vw;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 2vw;
+    width: 40vw;
+    margin: 1vw;
+    border-color: #4A4A4A;
+    color: #4A4A4A;
+}
+
+.line-input:focus {
+    outline-style: none;
+}
+
+.line-input-invalid {
+    border-color: #FF3B30;
+}
+
+.line-input.line-input-invalid::-webkit-input-placeholder {
+    color: red;
+}
+
+/****BaseButtons*****/
+
+.button {
+    border-style: solid;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    border-radius: 0.2em;
+    border-width: 0.1em;
+    border-color: #ffffff;
+    text-decoration: none;
+    font-family: Avenir Next, sans-serif;
+    font-size: 3vw;
+    text-align: center;
+    width: 20vw;
+    color: #ffffff;
+    margin: auto;
+    background-color: transparent;
+}
+
+.purple-button {
+    background-color: #5155C9;
+    font-family: "DIN Alternate", sans-serif;
+    font-size: 1.5vw;
+    color: #ffffff;
+    border-radius: 0.4vw;
+    border-style: solid;
+    border-color: #5155C9;
+    padding: 0.5vw;
+    cursor: pointer;
+    letter-spacing: 0.01vw;
+    width: 10vw;
+    text-align: center;
+}
+
+.button:hover {
+    color: #5155C9;
+    background-color: #ffffff;
+}
+
+.title {
+    font-family: "DIN Alternate", sans-serif;
+    margin: 0;
+}
+
+.title--one {
+    font-size: 150px;
+}
+
+.title--two {
+    font-size: 4.5vw;
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+
+.title-three {
+    font-size: 3vw;
+    font-weight: normal;
+    font-family: "Avenir Next", sans-serif;
+}
+
+.page-title {
+    color: #ffffff;
+    /*margin: 1vw 0;*/
+    text-align: center;
+}
+
+.light {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.dark {
+    color: #4A4A4A;
+    border-color: #4A4A4A;
+}
+
+.dark-background {
+    background: linear-gradient(50deg, #574BCD 15%, #2999AD, #35C092, #41E975);
+}
+
+/*
+**********************************************
+Header CSS
+**********************************************
+ */
+.header {
+    grid-area: header;
+    height: 40vw;
+}
+
+/*****Header Background *****/
+
+.gradient-background {
+    background: linear-gradient(130deg, #574BCD 15%, #2999AD, #35C092, #41E975);
+    min-height: 39vw;
+
+}
+
+.a-graphic {
+    background-image: url("../elements/small_white_a.png");
+    background-size: 150vw;
+    background-position-y: -16vw;
+    opacity: 0.1;
+
+}
+
+.a-graphic-background {
+    min-height: 39vw;
+
+}
+
+/*****Header******/
+
+.header-wrapper {
+    top: -40vw;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+}
+
+.white_logo {
+    max-width: 30vw;
+    margin: 1.5vw 0 0 2vw;
+}
+
+.nav_icon {
+    padding: 2vw;
+    width: 4vw;
+}
+
+
+
+/*
+**********************************************
+Menu CSS
+**********************************************
+ */
+
+.nav {
+    display: inline-block;
+    margin: 1.5vw 2vw 0 0;
+    cursor: pointer;
+    z-index: 3;
+
+}
+
+.icon-bar {
+    width: 3.5vw;
+    height: .35vw;
+    background-color: #ffffff;
+    margin: .5vw 0;
+    transition: 0.4s;
+    z-index: auto;
+}
+
+/* Rotate first bar */
+.x-icon .bar-one {
+    -webkit-transform: rotate(-45deg) translate(-1vw, 1vw);
+    transform: rotate(-45deg) translate(-1vw, 1vw);
+    background-color: #4A4A4A;
+}
+
+/* Fade out the second bar */
+.x-icon .bar-two {
+    opacity: 0;
+    background-color: #4A4A4A;
+}
+
+/* Rotate last bar */
+.x-icon .bar-three {
+    -webkit-transform: rotate(45deg) translate(-.2vw, -.2vw);
+    transform: rotate(45deg) translate(-.2vw, -.2vw);
+    background-color: #4A4A4A;
+}
+
+/* Filter */
+.filter {
+    position: fixed; /* Sit on top of the page sections */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+/* Filter */
+.filter-level-two {
+    position: fixed; /* Sit on top of the page sections */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+
+/* Menu */
+.menu-container {
+    position: fixed; /* Sit on top of the page sections */
+    /*display: none; !* Hidden by default *!*/
+    width: 21vw; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 75%;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff; /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    padding:4vw 2vw;
+    margin-left: 25vw;
+}
+
+.menu {
+    width: auto;
+    margin: 0;
+}
+
+.menu-nav {
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1vw;
+}
+
+.menu-item {
+    display: inline-block;
+    padding: 1vw 0;
+    width: 100%;
+    text-align: left;
+    border-bottom-style:solid;
+    border-bottom-width: 0.1vw;
+    border-color: #4A4A4A;
+}
+
+.text--menu {
+    font-size: 2vw;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    color: #4A4A4A;
+}
+
+#sign-in {
+    font-weight: lighter;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.text--menu:hover, #sign-in:hover {
+    font-weight: normal;
+}
+
+#menu-cart-img {
+    max-width: 3vw;
+    margin: auto;
+    cursor: pointer;
+}
+
+.flex-container--cart {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-title {
+    text-align: center;
+    width: auto;
+}
+
+.menu-item--bottom {
+    border-bottom-style: none;
+}
+
+.menu-item--top {
+    border-top-style: solid;
+    border-top-width: 0.1vw;
+    border-color: #4A4A4A;
+}
+
+.cart-number {
+    font-size: 3vw;
+    font-weight: normal;
+    margin-left: 1vw;
+    color: #4A4A4A;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/*
+**********************************************
+Footer CSS
+**********************************************
+ */
+
+.footer {
+    grid-area: footer;
+    display: flex;
+}
+
+.footer-item {
+    flex: 1 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/****Colored Logo******/
+
+.logo-container {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.logo_img {
+    max-width: 20vw;
+    margin: 2vw auto;
+}
+
+.copyright {
+    font-family: "Avenir Next", sans-serif;
+    margin-left: 1vw;
+    font-size: 1vw;
+    color: #4A4A4A;
+}
+
+/****Links*****/
+
+.links-container {
+    flex: 2 20vw;
+}
+
+.column-container {
+    flex: 1 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+}
+.column-header {
+    text-align: left;
+    font-family: Avenir Next, sans-serif;
+    font-weight: normal;
+    font-size: 1.5vw;
+    color: #4A4A4A;
+    margin: 2vw 0 0 5vw;
+
+}
+
+.column-item {
+    display: inline-block;
+    text-align: left;
+    font-family: "Lucida Grande", sans-serif;
+    color: #9B9B9B;
+    font-size: 1vw;
+    margin-top: 0.1vw;
+}
+
+/****Social Media*****/
+
+.social-media-container {
+    flex: 1 10vw;
+}
+.social-media-img {
+    max-width: 4.5vw;
+    margin: 2vw auto auto auto;
+
+
+
+}

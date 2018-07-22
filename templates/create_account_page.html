@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/create_account_page.css' %}"/>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endblock css %}
+</head>
+<body>
+    {% block content %}
+          {# ############Header############## #}
+        <div class="header">
+            <div class="gradient-background">
+                <div class="a-graphic">
+                    <div class="a-graphic-background">
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <div class="header-container">
+                    <div class="logo header-item">
+                        <img class="white_logo" src="{% static 'images/logos/full_logo_white.png' %}" alt="white_logo"/>
+                    </div>
+                    <nav class="nav header-item" id="xyz">
+                        <div class="icon-bar bar-one"></div>
+                        <div class="icon-bar bar-two"></div>
+                        <div class="icon-bar bar-three"></div>
+                    </nav>
+                </div>
+        {# #########Content######### #}
+                <div class="header-content-container">
+                    <h2 class="title title--two page-title">Create Account.</h2>
+                    <div class="flex-container create-account-form">
+                       <form action="" method="post">
+                           {% csrf_token %}
+                           <div class="first-name flex-item">
+                               <label class="label">First Name</label>
+                               {{ form.first_name.errors }}
+                                {% render_field form.first_name class="input text-box" placeholder="first name"%}
+                           </div>
+                           <div class="last-name flex-item">
+                               <label class="label">Last Name</label>
+                               {{ form.last_name.errors }}
+                               {% render_field form.last_name class="input text-box" placeholder="last name"%}
+                           </div>
+                           <div class="email flex-item">
+                               <label class="label">Email</label>
+                               {% render_field form.email class="input text-box" placeholder="email"%}
+                           </div>
+                           <div class="cell flex-item">
+                               <label class="label">Mobile Number</label>
+                               {% render_field form.cell class="input text-box" placeholder="mobile"%}
+                           </div>
+                           <div class="password flex-item">
+                               <label class="label">Password</label>
+                               {% render_field form.password class="input text-box" placeholder="password"%}
+                           </div>
+                           <div class="password-confirmation flex-item">
+                               <label class="label">Password Confirmation</label>
+                               {% render_field form.password_confirm class="input text-box" placeholder="confirm password"%}
+                           </div>
+                           <div class="create-account flex-item">
+                            <label class="label">Create Account</label>
+                            <button class="button button--create-account" type="submit">Create Account</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock content %}
+</body>
+</html>

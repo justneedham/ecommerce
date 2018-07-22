@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/login_page.css' %}"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endblock css %}
+</head>
+<body>
+    {% block content %}
+        {# ############Header############## #}
+        <div class="header">
+            <div class="gradient-background">
+                <div class="a-graphic">
+                    <div class="a-graphic-background">
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <div class="header-container">
+                    <div class="logo header-item">
+                        <img class="white_logo" src="{% static 'images/logos/full_logo_white.png' %}" alt="white_logo"/>
+                    </div>
+                     <nav class="nav header-item" id="xyz">
+                        <div class="icon-bar bar-one"></div>
+                        <div class="icon-bar bar-two"></div>
+                        <div class="icon-bar bar-three"></div>
+                    </nav>
+                </div>
+                {# #########Content######### #}
+                <div class="header-content-container">
+                    <h2 class="title title--two page-title">Login.</h2>
+                    <div class="flex-container login-form">
+                       <div class="email flex-item">
+                           <label class="label">Email</label>
+                           <input class="input text-box" placeholder="email" type="text">
+                       </div>
+                        <div class="password flex-item">
+                            <label class="label">Password</label>
+                            <input class="input text-box" placeholder="password" type="text">
+                        </div>
+                        <div class="buttons flex-item">
+                            <button class="button button--sign-in">Sign In</button>
+                            <a class="button button--create-account" href="{% url 'create_account_page' %}">Create Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock content %}
+</body>
+</html>

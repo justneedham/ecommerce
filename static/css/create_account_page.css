@@ -1,0 +1,60 @@
+/*
+**********************************************
+Header Adjustments CSS
+**********************************************
+ */
+
+.header {
+    height: 65vw;
+}
+
+.gradient-background {
+    min-height: 65vw;
+}
+
+.a-graphic-background {
+    min-height: 65vw;
+}
+
+.header-wrapper {
+    top: -66vw;
+}
+
+/*
+**********************************************
+Create Account CSS
+**********************************************
+ */
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+            "header"
+            "footer";
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    margin: 0;
+}
+
+.create-account-form {
+    flex-direction: column;
+    align-items: center;
+}
+
+    .flex-item {
+        flex-grow: 1;
+        width: 60vw;
+        text-align: center;
+        margin: 2vw;
+    }
+
+        .create-account-form .input {
+            width: 100%;
+        }
+
+        .button--create-account {
+            width: 100%
+        }
+
+

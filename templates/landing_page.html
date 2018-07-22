@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/landing_page.css' %}"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endblock css %}
+</head>
+<body>
+    {% block content %}
+        {# ############Header############## #}
+        <div class="header">
+            <div class="gradient-background">
+                <div class="a-graphic">
+                    <div class="a-graphic-background">
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <div class="header-container">
+                    <div class="logo header-item">
+                        <img class="white_logo" src="{% static 'images/logos/full_logo_white.png' %}" alt="white_logo"/>
+                    </div>
+                    <nav class="nav header-item" id="xyz">
+                        <div class="icon-bar bar-one"></div>
+                        <div class="icon-bar bar-two"></div>
+                        <div class="icon-bar bar-three"></div>
+                    </nav>
+                </div>
+                <div class="header-content-container">
+                    <h1 class="title title--one headline light">Rentals. Delivered.</h1>
+                    <div class="flex-container">
+                        <a class="button button--rentals" href="{% url 'search_page' %}">Find Rentals</a>
+                        <a class="button button--textbooks" href="{% url 'search_page' %}">Sell Textbooks</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# ############Main############## #}
+        <div class="main">
+        <section id="whats-alexandria-section">
+            <img id="book-img" src="{% static 'elements/book.png' %}" alt="white_logo"/>
+            <div class="content-block">
+                <h2 class="title title--two dark">What's Alexandria?</h2>
+                <div id="rentals" class="text-block">
+                    <h3 class="title title-three dark">Rentals</h3>
+                    <p class="text dark">
+                        Rent textbooks from Alexandria Books and have them delivered to
+                        your door. Don't worry about shipping your books back, we'll
+                        pick them up at the end of the semester.
+                    </p>
+                </div>
+                <div id="buyback" class="text-block">
+                    <h3 class="title title-three dark">Textbook Buy Back</h3>
+                    <p class="text dark">
+                        Have old textbooks sitting around? Done with classes and need
+                        some spending money? Alexandria will give you cash for you
+                        used book. We'll pick those up too.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="textbooks_made_simple" class="dark-background">
+                <div class="content-block">
+                    <h2 class="title title--two light">Textbooks made simple.</h2>
+                    <div class="text-block">
+                        <h3 class="title title-three light">Selection</h3>
+                        <p class="text light">
+                            Simply search for books by title, isbn or subject. Alexandria
+                            features a clean and simplified interface. No reviews. No
+                            recommendations. Can't find what you're looking for? Fill out
+                            the request form and we'll order it for you.
+                        </p>
+                    </div>
+                    <div class="text-block">
+                        <h3 class="title title-three light">Payment</h3>
+                        <p class="text light">
+                            For rentals, we accept all major credit cards in addition to
+                            Paypal, Venmo, Square Cash and Bitcoin. Alexandria will buyback
+                            textbooks with your preferred payments platform.
+                        </p>
+                    </div>
+                    <div class="text-block" id="delivery">
+                        <h3 class="title title-three light">Delivery/Pickup</h3>
+                        <p class="text light">
+                            Unless otherwise specified, all pick-ups and deliveries will be
+                            made on Saturdays. When completing your order choose the best 3
+                            hr block that works for you. In a hurry? Contact us for special
+                            deliveries and expedited rates.
+                        </p>
+                    </div>
+                </div>
+                <div id="logo_container">
+                    <img id="visa" src="{% static 'images/misc_logos/visa_logo.png' %}" alt="white_logo" class="fin_logo"/>
+                    <img id="master" src="{% static 'images/misc_logos/mastercard_logo.png' %}" alt="white_logo" class="fin_logo"/>
+                    <img id="paypal" src="{% static 'images/misc_logos/paypal_logo.png' %}" alt="white_logo" class="fin_logo"/>
+                    <img id="venmo" src="{% static 'images/misc_logos/venmo_logo.png' %}" alt="white_logo" class="fin_logo"/>
+                    <img id="square" src="{% static 'images/misc_logos/square_logo.png' %}" alt="white_logo" class="fin_logo"/>
+                    <img id="bitcoin" src="{% static 'images/misc_logos/bitcoin_logo.png' %}" alt="white_logo" class="fin_logo"/>
+                </div>
+        </section>
+            {# ##########HowItWorks########### #}
+        <section id="how-it-works" class="content-block">
+            <h2 class="title title--two dark">How it works.</h2>
+            <div class="slider dark-background">
+                <a class="slider-button slider-button-rent slider-button--active">Rent</a>
+                <a class="slider-button slider-button-sell">Sell</a>
+            </div>
+            <div id="chart">
+                {# #######Rent####### #}
+                <div id="item-1" class="box box-rent">
+                    <img id="cart-img" src="{% static 'images/chart_icons/Cart Icon.png' %}" alt="white_logo" class="chart-icon"/>
+                    <h3 class="title title-three dark">Shop</h3>
+                    <p class="text text-chart dark">
+                        Selecting your rentals is easy. Search by title, category or isbn.
+                        Can't find what you're looking for? Send us a request and we'll
+                        order it for you.
+                    </p>
+                </div>
+                <div id="item-2" class="box box-rent">
+                    <img src="{% static 'images/chart_icons/Truck Icon.png' %}" alt="white_logo" class="chart-icon"/>
+                    <h3 class="title title-three dark">Delivery</h3>
+                    <p class="text text-chart dark">
+                        While checking out, schedule your preferred delivery date and time.
+                        Choose the best 3-hour block and we'll text you when we're close.
+                    </p>
+                </div>
+                <div id="item-3" class="box box-rent">
+                    <img id="form-img" src="{% static 'images/chart_icons/Form Icon.png' %}" alt="white_logo" class="chart-icon"/>
+                    <h3 class="title title-three dark">Return</h3>
+                    <p class="text text-chart dark">
+                        When your return date approaches we'll send you a reminder. If
+                        your payment method required a deposit, you'll be refunded at
+                        that time.
+                    </p>
+                </div>
+                <div id="item-4" class="box box-rent">
+                    <img src="{% static 'images/chart_icons/Truck Icon 2.png' %}" alt="white_logo" class="chart-icon"/>
+                    <h3 class="title title-three dark">Pick Up</h3>
+                    <p class="text text-chart dark">
+                        We'll send you a form to schedule the most convenient pick up time.
+                        Simply pick a 3-hour time block and we'll text you when we're nearby.
+                    </p>
+                </div>
+                 {# #####Sell###### #}
+                <div id="item-5" class="box box-sell box--hidden">
+                    <img class="chart-icon search-icon" id="search-img" src="{% static 'images/chart_icons/Search Icon (Colored).png' %}" alt="white_logo"/>
+                    <h3 class="title title-three dark">Search</h3>
+                    <p class="text text-chart dark">
+                        Enter the isbn of your textbook into the search bar. The isbn
+                        is your 13-digit number typically found in the cover or near
+                        the barcode.
+                    </p>
+                </div>
+                <div id="item-6" class="box box-sell box--hidden">
+                    <img class="chart-icon quote-icon" src="{% static 'images/chart_icons/Quote Icon.png' %}" alt="white_logo"/>
+                    <h3 class="title title-three dark">Quote</h3>
+                    <p class="text text-chart dark">
+                        It may take a moment but our website will calculate your book's
+                        value. If you accept, you'll be directed to a form to provide
+                        additional information.
+                    </p>
+                </div>
+                <div id="item-7" class="box box-sell box--hidden">
+                    <img src="{% static 'images/chart_icons/Truck Icon 2.png' %}" alt="white_logo" class="chart-icon"/>
+                    <h3 class="title title-three dark">Pick Up</h3>
+                    <p class="text text-chart dark">
+                        You'll be asked to provide your preferred pick up date and time. Choose
+                        the best 3-hour block and we'll text you when we're close.
+                    </p>
+                </div>
+                <div id="item-8" class="box box-sell box--hidden">
+                    <img class="chart-icon payment-icon" src="{% static 'images/chart_icons/Money Icon.png' %}" alt="white_logo"/>
+                    <h3 class="title title-three dark">Payment</h3>
+                    <p class="text text-chart dark">
+                        Payment will be processed at the time of pick-up. We currently payout
+                        via: Paypal, Venmo and Square Cash.
+                    </p>
+                </div>
+            </div>
+        </section>
+            {# ##############SearchAlexandria############### #}
+        <section id="search">
+            <div class="content-block content-block-search">
+             <h2 class="title title--two page-title">Search Alexandria.</h2>
+                    <div class="flex-container initial-search">
+                        <div class="search-box flex-item flex-container">
+                             {# ###################DropDown################### #}
+                            <div class="dropdown-container">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-item dropdown-item-top">
+                                        <button class="dropdown-button text sell">Sell</button>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <button class="dropdown-button text rent">Rent</button>
+                                    </li>
+                                </ul>
+                            </div>
+                                {# #####MainSearchBox###### #}
+                            <button class="text-box search-filter-button">
+                                Rent
+                            </button>
+                            <label class="label">Search box</label>
+                            <input class="input text-box search-box" placeholder="Enter title, isbn or category" type="text">
+                        </div>
+                        <div class="search-button flex-item">
+                            <label class="label">Search button</label>
+                            <a class="button button--search" href="{% url 'search_page' %}">Search</a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        </div>
+        <script src="{% static 'javascript/landing_page.js' %}"></script>
+        <script src="{% static 'javascript/search_page.js' %}"></script>
+    {% endblock content %}
+</body>
+</html>

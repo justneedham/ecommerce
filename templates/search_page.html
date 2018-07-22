@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/search_page.css' %}"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endblock css %}
+</head>
+<body>
+    {% block content %}
+        {# ############Header############## #}
+        <div class="header">
+            <div class="gradient-background">
+                <div class="a-graphic">
+                    <div class="a-graphic-background">
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <div class="header-container">
+                    <div class="logo header-item">
+                        <img class="white_logo" src="{% static 'images/logos/full_logo_white.png' %}" alt="white_logo"/>
+                    </div>
+                   <nav class="nav header-item" id="xyz">
+                        <div class="icon-bar bar-one"></div>
+                        <div class="icon-bar bar-two"></div>
+                        <div class="icon-bar bar-three"></div>
+                    </nav>
+                </div>
+                {# ###################Content################### #}
+                <div class="header-content-container">
+                    <h2 class="title title--two page-title">Search Alexandria.</h2>
+                    <form class="flex-container initial-search" action="" method="post">
+                        {% csrf_token %}
+                        {% render_field form.search_string class="test-form" %}
+                        <div class="search-box flex-item flex-container">
+                             {# ###################DropDown################### #}
+                            <div class="dropdown-container">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-item dropdown-item-top">
+                                        <button class="dropdown-button text sell">Sell</button>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <button class="dropdown-button text rent">Rent</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="text-box search-filter-button">
+                                Rent
+                            </button>
+                            <label class="label">Search box</label>
+                            <input class="input text-box search-box" placeholder="Enter title, isbn or category" type="text" id="search-text-input">
+                        </div>
+                        <div class="search-button flex-item">
+                            <label class="label">Search button</label>
+                            <a class="button button--search" href="{% url 'search_results_page' %}" type="submit">Search</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'javascript/search_page.js' %}"></script>
+    {% endblock content %}
+</body>
+</html>

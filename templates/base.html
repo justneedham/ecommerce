@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Alexandria Books</title>
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+    {% endblock css %}
+    {% block cart %}
+        <script src="{% static 'javascript/cart.js' %}"></script>
+    {% endblock cart %}
+</head>
+<body>
+    {% block content %}
+    {% endblock content %}
+    {% block menu %}
+         {# ############Menu############## #}
+        <div class="filter">
+        </div>
+
+        <div class="menu-container">
+            <h2 class="title title--two menu-title dark">Menu.</h2>
+            <div class="flex-container menu-nav">
+                <a class="title title-three dark" id="sign-in" href="{% url 'login_page' %}">Sign In</a>
+                <div class="flex-container flex-container--cart">
+                    <img id="menu-cart-img" src="{% static 'images/chart_icons/Cart Icon (Gray).png' %}">
+                    <a class="text cart-number" href="{% url 'cart_page' %}">(0)</a>
+                </div>
+            </div>
+            <ul class="column column-container menu">
+                <li class="menu-item menu-item--top">
+                    <a class="text text--menu" href="{% url 'search_page' %}">Search</a>
+                </li>
+                <li class="menu-item">
+                    <a class="text text--menu">Request Textbooks</a>
+                </li>
+                <li class="menu-item">
+                    <a class="text text--menu">Schedule Pick Up</a>
+                </li>
+                <li class="menu-item">
+                    <a class="text text--menu">Find Rentals</a>
+                </li>
+                <li class="menu-item">
+                    <a class="text text--menu">Sell Textbooks</a>
+                </li>
+                <li class="menu-item">
+                    <a class="text text--menu">Account</a>
+                </li>
+                <li class="menu-item">
+                    <a class="text text--menu">Support</a>
+                </li>
+                <li class="menu-item menu-item--bottom">
+                    <a class="text text--menu">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    {% endblock menu %}
+    {% block scripts %}
+        <script src="{% static 'javascript/menu.js' %}"></script>
+    {% endblock scripts %}
+    {% block footer %}
+        {# ############Footer############## #}
+        <div class="footer">
+            <div class="logo-container footer-item">
+                <img class="logo_img" src="{% static 'images/logos/colored_logo_left.png' %}" alt="colored_logo"/>
+                <div class="copyright">Alexandria Books &copy; 2018</div>
+            </div>
+            <div class="links-container footer-item">
+                <div class="column-container">
+                    <h3 class="column-header">Service</h3>
+                    <ul class="column">
+                        <li class="column-item">Overview</li>
+                        <li class="column-item">Rent</li>
+                        <li class="column-item">Sell</li>
+                    </ul>
+                </div>
+                <div class="column-container">
+                    <h3 class="column-header">Company</h3>
+                    <ul class="column">
+                        <li class="column-item">Contact</li>
+                        <li class="column-item">About</li>
+                        <li class="column-item">Jobs</li>
+                    </ul>
+                </div>
+                <div class="column-container">
+                    <h3 class="column-header">Support</h3>
+                    <ul class="column">
+                        <li class="column-item">Help</li>
+                        <li class="column-item">FAQ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-media-container footer-item">
+                <img class="social-media-img" src="{% static 'images/social_media/instagram.png' %}" alt="instagram_logo"/>
+                <img class="social-media-img" src="{% static 'images/social_media/facebook.png' %}" alt="facebook_logo"/>
+                <img class="social-media-img" src="{% static 'images/social_media/twitter.png' %}" alt="twitter_logo"/>
+            </div>
+        </div>
+    {% endblock footer %}
+</body>
+</html>

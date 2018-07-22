@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/cart_page.css' %}"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endblock css %}
+</head>
+<body>
+    {% block content %}
+        {# ############Header############## #}
+        <div class="header">
+            <div class="gradient-background">
+                <div class="a-graphic">
+                    <div class="a-graphic-background">
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <div class="header-container">
+                    <div class="logo header-item">
+                        <img class="white_logo" src="{% static 'images/logos/full_logo_white.png' %}" alt="white_logo"/>
+                    </div>
+                    <nav class="nav header-item" id="xyz">
+                        <div class="icon-bar bar-one"></div>
+                        <div class="icon-bar bar-two"></div>
+                        <div class="icon-bar bar-three"></div>
+                    </nav>
+                </div>
+        {# #########Content######### #}
+                <div class="header-content-container">
+                    <h2 class="title title--two page-title">Your Cart.</h2>
+                    <div class="cart-container">
+                        <div class="flex-container cart-header">
+                            <h2 class="text cart-header-text header-text-item">Item</h2>
+                            <h2 class="text cart-header-text header-text-qty">Qty</h2>
+                            <h2 class="text cart-header-text header-text-total">Total</h2>
+                        </div>
+                        <div class="cart-contents">
+                            <div class="flex-container cart-item item-one">
+                                <div class="flex-container item-container">
+                                    <img class="item-img" src="{% static 'images/filler_images/search_results/book8.png' %}">
+                                    <div class="flex-container item-text-container">
+                                        <p class="text book-cart-text book-cart-title">Antitrust issues in Intellectual Property Law</p>
+                                        <p class="text book-cart-text book-cart-author">Bradford P. Lyeria</p>
+                                        <p class="text book-cart-text book-cart-version">Paperback Version</p>
+                                        <p class="text book-cart-text book-cart-purchase-type">Rental: (4 Months)</p>
+                                    </div>
+                                </div>
+                                <div class="flex-container qty-pill">
+                                    <button class="pill-component pill-button pill-button--minus">-</button>
+                                    <label class="label">Item Quantity</label>
+                                    <input class="pill-component pill-number text" placeholder="1">
+                                    <button class="pill-component pill-button pill-button--plus">+</button>
+                                </div>
+                                <p class="text item-price">$69.99</p>
+                            </div>
+                            <div class="flex-container cart-item item-one">
+                                <div class="flex-container item-container">
+                                    <img class="item-img" src="{% static 'images/filler_images/search_results/book8.png' %}">
+                                    <div class="flex-container item-text-container">
+                                        <p class="text book-cart-text book-cart-title">Antitrust issues in Intellectual Property Law</p>
+                                        <p class="text book-cart-text book-cart-author">Bradford P. Lyeria</p>
+                                        <p class="text book-cart-text book-cart-version">Paperback Version</p>
+                                        <p class="text book-cart-text book-cart-purchase-type">Rental: (4 Months)</p>
+                                    </div>
+                                </div>
+                                <div class="flex-container qty-pill">
+                                    <button class="pill-component pill-button pill-button--minus">-</button>
+                                    <label class="label">Item Quantity</label>
+                                    <input class="pill-component pill-number text" placeholder="1">
+                                    <button class="pill-component pill-button pill-button--plus">+</button>
+                                </div>
+                                <p class="text item-price">$69.99</p>
+                            </div>
+                            <div class="flex-container cart-item item-one">
+                                <div class="flex-container item-container">
+                                    <img class="item-img" src="{% static 'images/filler_images/search_results/book8.png' %}">
+                                    <div class="flex-container item-text-container">
+                                        <p class="text book-cart-text book-cart-title">Antitrust issues in Intellectual Property Law</p>
+                                        <p class="text book-cart-text book-cart-author">Bradford P. Lyeria</p>
+                                        <p class="text book-cart-text book-cart-version">Paperback Version</p>
+                                        <p class="text book-cart-text book-cart-purchase-type">Rental: (4 Months)</p>
+                                    </div>
+                                </div>
+                                <div class="flex-container qty-pill">
+                                    <button class="pill-component pill-button pill-button--minus">-</button>
+                                    <label class="label">Item Quantity</label>
+                                    <input class="pill-component pill-number text" placeholder="1">
+                                    <button class="pill-component pill-button pill-button--plus">+</button>
+                                </div>
+                                <p class="text item-price">$69.99</p>
+                            </div>
+                        </div>
+                        <div class="flex-container cart-footer">
+                            <h2 class="text cart-header-text header-text-subtotal-label">Subtotal</h2>
+                            <h2 class="text cart-header-text header-text-subtotal-number">$180.87</h2>
+                        </div>
+                        <div class="flex-container cart-buttons">
+                            <a class="purple-button purple-button-shop" href="{% url 'search_page' %}">Shop</a>
+                            <a class="purple-button purple-button-checkout" href="{% url 'checkout_page' %}">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+        sessionStorage.setItem('test', 120);
+    </script>
+    {% endblock content %}
+</body>
+</html>

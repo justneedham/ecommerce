@@ -1,0 +1,144 @@
+/*
+**********************************************
+Header Adjustments CSS
+**********************************************
+ */
+
+.header {
+    height: 46.5vw;
+}
+
+.gradient-background {
+    min-height: 46.5vw;
+}
+
+.a-graphic-background {
+    min-height: 46.5vw;
+}
+
+.header-wrapper {
+    top: -47.5vw;
+}
+
+/*
+-------------------------
+Main Layout CSS
+-------------------------
+ */
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+            "header"
+            "footer";
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    margin: 0;
+}
+
+/*
+**********************************************
+Search Alexandria CSS
+**********************************************
+ */
+
+.initial-search {
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content-container {
+    margin-top: 8vw;
+}
+
+.search-box {
+    width: 100%;
+    border-radius: 0 0.2em 0.2em 0;
+    position: relative;
+}
+
+.flex-item {
+flex-grow: 1;
+width: 60vw;
+text-align: center;
+margin: 1vw;
+}
+
+.button--search {
+    padding: 0 4vw;
+}
+
+/*
+-------------------------
+Dropdown Selector CSS
+-------------------------
+ */
+
+.search-filter-button {
+    border-radius: 0.2em 0 0 0.2em;
+    margin-right: 0;
+    border: none;
+    background-color: #4A4A4A;
+    color: #ffffff;
+    font-family: "DIN Alternate", sans-serif;
+    font-size: 2vw;
+    padding: 1vw;
+    cursor: pointer;
+}
+
+.dropdown-container {
+    position: absolute;
+    display: none;
+    width: 8vw;
+    z-index: 2;
+    left: 0;
+    background-color: #ffffff;
+    padding: 0 1vw;
+    border-radius: 0.8em;
+    border-style: solid;
+    border-color: #4A4A4A;
+
+}
+.dropdown-list {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-item {
+    list-style-type: none;
+    padding: 1vw 0;
+    border-top-style: solid;
+    border-color: #4A4A4A;
+    border-width: 0.1vw;
+}
+
+.dropdown-item-top {
+    border: none;
+}
+
+.dropdown-button {
+    font-size: 2vw;
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+}
+
+.dropdown-button:hover {
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

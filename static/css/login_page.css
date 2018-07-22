@@ -1,0 +1,83 @@
+/*
+**********************************************
+Header Adjustments CSS
+**********************************************
+ */
+
+.header {
+    height: 46.5vw;
+}
+
+.gradient-background {
+    min-height: 46.5vw;
+}
+
+.a-graphic-background {
+    min-height: 46.5vw;
+}
+
+.header-wrapper {
+    top: -47.5vw;
+}
+
+/*
+**********************************************
+Login CSS
+**********************************************
+ */
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+            "header"
+            "footer";
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    margin: 0;
+}
+
+.header-content-container {
+    margin-top: 4vw;
+}
+
+.login-form {
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-item {
+    flex-grow: 1;
+    width: 60vw;
+    text-align: center;
+    margin: 1vw;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button--sign-in {
+    margin: 0;
+    width: 25vw;
+}
+
+.button--create-account {
+    margin: 0;
+    width: 25vw;
+}
+
+.login-form .text-box {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+

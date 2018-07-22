@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/product_detail_page.css' %}"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endblock css %}
+</head>
+<body>
+    {% block content %}
+        {# ############Header############## #}
+        <div class="header">
+            <div class="gradient-background">
+                <div class="a-graphic">
+                    <div class="a-graphic-background">
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <div class="header-container combined-search">
+                    <div class="logo header-item">
+                        <img class="white_logo" src="{% static 'images/logos/full_logo_white.png' %}" alt="white_logo"/>
+                    </div>
+                    <div class="flex-container initial-search header-item">
+                        <div class="search-box flex-item flex-container search-box-container">
+                             {# ###################DropDown################### #}
+                            <div class="dropdown-container">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-item dropdown-item-top">
+                                        <button class="dropdown-button text sell">Sell</button>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <button class="dropdown-button text rent">Rent</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            {# #####SearchBar##### #}
+                            <button class="text-box search-filter-button search-box-component">
+                                Rent
+                            </button>
+                            <label class="label">Search box</label>
+                            <input class="input text-box search-box search-box-component" placeholder="Enter title, isbn or category" type="text" id="search-text-input">
+                            <button class="magnifyingglass-container search-box-component">
+                                <img class="magnifyingglass-img" src="{% static 'images/chart_icons/Search Icon (White).png' %}">
+                            </button>
+                        </div>
+                    </div>
+                   <nav class="nav header-item" id="xyz">
+                        <div class="icon-bar bar-one"></div>
+                        <div class="icon-bar bar-two"></div>
+                        <div class="icon-bar bar-three"></div>
+                    </nav>
+                </div>
+                {# ###################HeaderContent################### #}
+                <div class="header-content-container">
+                </div>
+            </div>
+        </div>
+        {# #####MainContent##### #}
+        <div class="flex-container main-content">
+            <img class="book-img" src="{% static 'images/filler_images/search_results/book1.png' %}">
+            <div class="flex-container book-detail-container">
+                <div class="flex-container book-version-tabs">
+                    <h2 class="text version-tab version-tab--active">Paperback</h2>
+                    <h2 class="text version-tab">Hardcover</h2>
+                </div>
+                <div class="book-detail-item">
+                    <p class="text book-detail-title">The Legal Environment of Business: Texts and Cases</p>
+                    <p class="text book-detail-author">Cross Miller</p>
+                </div>
+                <div class="flex-container book-detail-item book-purchase-buttons">
+                    <button class="purple-button purple-button-rent">Rent $19.99</button>
+                    <button class="purple-button purple-button-buy">Buy $39.99</button>
+                </div>
+                <div class="book-detail-item book-details-container">
+                    <h2 class="text book-detail-details">Details</h2>
+                    <p class="text">Publisher:</p>
+                    <p class="text">Edition:</p>
+                    <p class="text">ISBN:</p>
+                    <p class="text">Delivery:</p>
+                </div>
+            </div>
+        </div>
+        {# ####RentalPeriodSelection#### #}
+        <div class="filter-level-two">
+        </div>
+        <div class="rental-period-container">
+            <div class="rental-period-header">
+                <div class="exit-icon">
+                    <div class="exit-icon-bar exit-bar-one"></div>
+                    <div class="exit-icon-bar exit-bar-two"></div>
+                </div>
+                <p class="text rental-header-text">Choose Rental Length.</p>
+            </div>
+            <div class="flex-container rental-period-contents">
+                <div class="flex-container rental-period rental-period--selected">
+                    <p class="text rental-period-text rental-period-text--selected period">Spring (May 17th)</p>
+                    <p class="text rental-period-text rental-period-text--selected price">+$0.00</p>
+                </div>
+                <div class="flex-container rental-period">
+                    <p class="text rental-period-text period">Summer (August 1st)</p>
+                    <p class="text rental-period-text price">+$14.99</p>
+                </div>
+                <div class="flex-container rental-period">
+                    <p class="text rental-period-text period">Fall (December 4th)</p>
+                    <p class="text rental-period-text price">+$39.99</p>
+                </div>
+                <button class="purple-button purple-button-add-to-cart">
+                    Add to cart
+                </button>
+            </div>
+        </div>
+        <script src="{% static 'javascript/search_page.js' %}"></script>
+        <script src="{% static 'javascript/product_detail_page.js' %}"></script>
+    {% endblock content %}
+    {% block footer %}
+        {# ############Footer############## #}
+        <div class="footer">
+            <div class="logo-container footer-item">
+                <img class="logo_img" src="{% static 'images/logos/Stacked Logo Left (White).png' %}" alt="colored_logo"/>
+                <div class="copyright text-white">Alexandria Books &copy; 2018</div>
+            </div>
+            <div class="links-container footer-item">
+                <div class="column-container">
+                    <h3 class="column-header text-white">Service</h3>
+                    <ul class="column">
+                        <li class="column-item text-white">Overview</li>
+                        <li class="column-item text-white">Rent</li>
+                        <li class="column-item text-white">Sell</li>
+                    </ul>
+                </div>
+                <div class="column-container">
+                    <h3 class="column-header text-white">Company</h3>
+                    <ul class="column">
+                        <li class="column-item text-white">Contact</li>
+                        <li class="column-item text-white">About</li>
+                        <li class="column-item text-white">Jobs</li>
+                    </ul>
+                </div>
+                <div class="column-container">
+                    <h3 class="column-header text-white">Support</h3>
+                    <ul class="column">
+                        <li class="column-item text-white">Help</li>
+                        <li class="column-item text-white">FAQ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-media-container footer-item">
+                <img class="social-media-img" src="{% static 'images/social_media/instagram.png' %}" alt="instagram_logo"/>
+                <img class="social-media-img" src="{% static 'images/social_media/facebook.png' %}" alt="facebook_logo"/>
+                <img class="social-media-img" src="{% static 'images/social_media/twitter.png' %}" alt="twitter_logo"/>
+            </div>
+        </div>
+    {% endblock footer %}
+</body>
+</html>

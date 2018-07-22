@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/checkout_page.css' %}"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endblock css %}
+</head>
+<body>
+    {% block content %}
+        {# ############Header############## #}
+        <div class="header">
+            <div class="gradient-background">
+                <div class="a-graphic">
+                    <div class="a-graphic-background">
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <div class="header-container">
+                    <div class="logo header-item">
+                        <img class="white_logo" src="{% static 'images/logos/full_logo_white.png' %}" alt="white_logo"/>
+                    </div>
+                    <nav class="nav header-item" id="xyz">
+                        <div class="icon-bar bar-one"></div>
+                        <div class="icon-bar bar-two"></div>
+                        <div class="icon-bar bar-three"></div>
+                    </nav>
+                </div>
+        {# #########Content######### #}
+                <div class="header-content-container">
+                    <h2 class="title title--two page-title">Delivery.</h2>
+                    <div class="checkout-container">
+                        <div class="checkout-step-container delivery-container">
+                            <h2 class="text checkout-header delivery-header">Delivery</h2>
+                            <div class="flex-container type-container">
+                                <div class="gradient-wrap local-outline outline-viewable">
+                                    <div class="type-container-item local-container highlighted">
+                                        <img class="local-image local-image--active img-viewable" src="{% static 'images/chart_icons/Truck Icon 2.png' %}">
+                                        <img class="local-image local-image--inactive img-hidden" src="{% static 'images/chart_icons/Truck Icon Inactive.png' %}">
+                                        <h2 class="type-header local-header">Local</h2>
+                                        <p class="text type-text">Available in Provo, UT only. We'll deliver/pick up
+                                            your books at no additional cost.</p>
+                                    </div>
+                                </div>
+                                <div class="gradient-wrap traditional-outline outline-hidden">
+                                    <div class="type-container-item traditional-container">
+                                        <img class="traditional-image traditional-image--active img-hidden" src="{% static 'images/chart_icons/Shipping Box Active.png' %}">
+                                        <img class="traditional-image traditional-image--inactive img-viewable" src="{% static 'images/chart_icons/Shipping Box Inactive.png' %}">
+                                        <h2 class="type-header traditional-header">Traditional</h2>
+                                        <p class="text type-text">Regular shipping for all orders outside of Provo, UT. Standard and
+                                        expedited options are available.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="address-container hidden">
+                                <div class="address-input-container street-input">
+                                    <label class="label">Street</label>
+                                    <input class="line-input address-input" placeholder="street">
+                                </div>
+                                <div class="address-input-container street-two-input">
+                                    <label class="label">Street Two</label>
+                                    <input class="line-input address-input" placeholder="apt">
+                                </div>
+                                <div class="address-input-container city-input">
+                                    <label class="label">City</label>
+                                    <input class="line-input address-input" placeholder="city">
+                                </div>
+                                <div class="address-input-container state-input">
+                                    <label class="label">State</label>
+                                    <input class="line-input address-input" placeholder="state">
+                                </div>
+                                <div class="address-input-container zip-input">
+                                    <label class="label">Zip Code</label>
+                                    <input class="line-input address-input" placeholder="zip code">
+                                </div>
+                                <div class="address-input-container country-input">
+                                    <label class="label">Country</label>
+                                    <input class="line-input address-input" placeholder="country">
+                                </div>
+                            </div>
+                            <div class="delivery-summary flex-container hidden">
+                                <div class="one-third">
+                                    <h2 class="summary-subheader">Details</h2>
+                                    <div class="summary-subsection flex-container">
+                                        <div class="summary-row flex-container">
+                                            <label class="label">Type</label>
+                                            <p class="summary-label">Type</p>
+                                            <p class="summary-value summary-value-delivery-type">Local</p>
+                                        </div>
+                                        <div class="summary-row flex-container">
+                                            <label class="label">Time</label>
+                                            <p class="summary-label">Time</p>
+                                            <p class="summary-value summary-value-delivery-time">7:30 pm</p>
+                                        </div>
+                                        <div class="summary-row flex-container">
+                                            <label class="label"></label>
+                                            <p class="summary-label">Date</p>
+                                            <p class="summary-value summary-value-delivery-date">Tues 6th May</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="two-third">
+                                    <h2 class="summary-subheader">Address</h2>
+                                    <div class="summary-content-wrapper flex-container">
+                                        <div class="summary-subsection flex-container">
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">Street</p>
+                                                <p class="summary-value summary-value-delivery-street">600 N 100 S</p>
+                                            </div>
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">City</p>
+                                                <p class="summary-value summary-value-delivery-city">Provo</p>
+                                            </div>
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">Zip</p>
+                                                <p class="summary-value summary-value-delivery-zip">84041</p>
+                                            </div>
+                                        </div>
+                                        <div class="summary-subsection flex-container">
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">Apt</p>
+                                                <p class="summary-value summary-value-delivery-apt">#510</p>
+                                            </div>
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">State</p>
+                                                <p class="summary-value summary-value-delivery-state">UT</p>
+                                            </div>
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">Country</p>
+                                                <p class="summary-value summary-value-delivery-country">US</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-step-container contact-container">
+                            <h2 class="text checkout-header contact-header">Contact</h2>
+                            <div class="flex-container contact-content-container hidden">
+                                <div class="first-input">
+                                    <label class="label">First Name</label>
+                                    <input class="line-input address-input" placeholder="first name">
+                                </div>
+                                <div class="last-input">
+                                    <label class="label">Last Name</label>
+                                    <input class="line-input address-input" placeholder="last name">
+                                </div>
+                                <div class="phone-input">
+                                    <label class="label">Phone Number</label>
+                                    <input class="line-input address-input" placeholder="phone">
+                                </div>
+                                <div class="email-input">
+                                    <label class="label">Email Address</label>
+                                    <input class="line-input address-input" placeholder="email">
+                                </div>
+                            </div>
+                            <div class="contact-summary flex-container hidden">
+                                <div class="one-third">
+                                    <h2 class="summary-subheader">Name</h2>
+                                    <div class="summary-subsection flex-container">
+                                        <div class="summary-row flex-container">
+                                            <p class="summary-label">First</p>
+                                            <p class="summary-value summary-value-contact-first">Justin</p>
+                                        </div>
+                                        <div class="summary-row flex-container">
+                                            <p class="summary-label">Last</p>
+                                            <p class="summary-value summary-value-contact-last">Needham</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="two-third">
+                                    <h2 class="summary-subheader">Email/Phone</h2>
+                                    <div class="summary-subsection flex-container">
+                                        <div class="summary-row summary-row-extended flex-container">
+                                            <p class="summary-label">Email</p>
+                                            <p class="summary-value summary-value-contact-email">justin.needham@pepperdine.edu</p>
+                                        </div>
+                                        <div class="summary-row summary-row-extended flex-container">
+                                            <p class="summary-label">Phone</p>
+                                            <p class="summary-value summary-value-contact-phone">(801)-696-8074</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-step-container payment-container">
+                            <h2 class="text checkout-header payment-header">Payment</h2>
+                            <div class="payment-content-container hidden">
+                                <div class="flex-container payment-spinner">
+                                    <img class="spinner-logo bitcoin-logo spinner-logo--selected" src="{% static 'images/misc_logos/bitcoin_logo.png' %}">
+                                    <img class="spinner-logo mastercard-logo" src="{% static 'images/misc_logos/mastercard_logo.png' %}">
+                                    <img class="spinner-logo paypal-logo" src="{% static 'images/misc_logos/paypal_logo.png' %}">
+                                    <img class="spinner-logo square-logo" src="{% static 'images/misc_logos/square_logo.png' %}">
+                                    <img class="spinner-logo venmo-logo" src="{% static 'images/misc_logos/venmo_logo.png' %}">
+                                    <img class="spinner-logo visa-logo" src="{% static 'images/misc_logos/visa_logo.png' %}">
+                                </div>
+                                <div class="flex-container payment-details">
+                                    <div class="payment-detail-item card-info hidden">
+                                         <h2 class="text payment-subheader">Card Info</h2>
+                                        <div class="card-info-item card-first">
+                                            <label class="label">First Name</label>
+                                            <input class="line-input card-info-input half" placeholder="first">
+                                        </div>
+                                        <div class="card-info-item card-last">
+                                            <label class="label">Last Name</label>
+                                            <input class="line-input card-info-input half" placeholder="last">
+                                        </div>
+                                        <div class="card-info-item card-number">
+                                            <label class="label">Card Number</label>
+                                            <input class="line-input card-info-input full" placeholder="card number">
+                                        </div>
+                                        <div class="card-info-item card-exp">
+                                            <label class="label">Card Expiration</label>
+                                            <input class="line-input card-info-input half" placeholder="exp date">
+                                        </div>
+                                        <div class="card-info-item card-code">
+                                            <label class="label">Card Security Code</label>
+                                            <input class="line-input card-info-input half" placeholder="code">
+                                        </div>
+                                    </div>
+                                    <div class="payment-detail-item billing-info hidden">
+                                        <h2 class="text billing-subheader">Billing</h2>
+                                        <div class="billing-info-item billing-street">
+                                            <label class="label">Billing Street Address</label>
+                                            <input class="line-input billing-info-input full" placeholder="street">
+                                        </div>
+                                        <div class="billing-info-item billing-apt">
+                                            <label class="label">Billing Apartment Number</label>
+                                            <input class="line-input billing-info-input half" placeholder="apt #">
+                                        </div>
+                                        <div class="billing-info-item billing-city">
+                                            <label class="label">Billing City</label>
+                                            <input class="line-input billing-info-input half" placeholder="city">
+                                        </div>
+                                        <div class="billing-info-item billing-state">
+                                            <label class="label">Billing State</label>
+                                            <input class="line-input billing-info-input half" placeholder="state">
+                                        </div>
+                                        <div class="billing-info-item billing-zip">
+                                            <label class="label">Billing Zip</label>
+                                            <input class="line-input billing-info-input half" placeholder="zip">
+                                        </div>
+                                    </div>
+                                    <div class="payment-detail-item username-info">
+                                        <h2 class="text username-subheader">Login</h2>
+                                        <div class="username-info-item username-username">
+                                            <label class="label">Username</label>
+                                            <input class="line-input username-info-input full" placeholder="username">
+                                        </div>
+                                        <div class="username-info-item username-password">
+                                            <label class="label">Password</label>
+                                            <input class="line-input username-info-input full" placeholder="password">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-summary hidden">
+                                <div class="one-third">
+                                    <h2 class="summary-subheader">Type</h2>
+                                    <div class="summary-subsection flex-container">
+                                        <img class="spinner-logo bitcoin-logo summary-type-logo summary-type-logo-chosen" src="{% static 'images/misc_logos/bitcoin_logo.png' %}">
+                                        <img class="spinner-logo mastercard-logo summary-type-logo hidden" src="{% static 'images/misc_logos/mastercard_logo.png' %}">
+                                        <img class="spinner-logo paypal-logo summary-type-logo hidden" src="{% static 'images/misc_logos/paypal_logo.png' %}">
+                                        <img class="spinner-logo square-logo summary-type-logo hidden" src="{% static 'images/misc_logos/square_logo.png' %}">
+                                        <img class="spinner-logo venmo-logo summary-type-logo hidden" src="{% static 'images/misc_logos/venmo_logo.png' %}">
+                                        <img class="spinner-logo visa-logo summary-type-logo hidden" src="{% static 'images/misc_logos/visa_logo.png' %}">
+                                    </div>
+                                </div>
+                                <div class="two-third">
+                                    <h2 class="summary-subheader">Billing</h2>
+                                    <div class="summary-content-wrapper flex-container">
+                                        <div class="summary-subsection flex-container">
+                                            <div  class="summary-row flex-container">
+                                                <p class="summary-label">Street</p>
+                                                <p class="summary-value">600 N 100 S</p>
+                                            </div>
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">City</p>
+                                                <p class="summary-value">Provo</p>
+                                            </div>
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">Zip</p>
+                                                <p class="summary-value">84041</p>
+                                            </div>
+                                        </div>
+                                        <div class="summary-subsection flex-container">
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">Apt</p>
+                                                <p class="summary-value">510</p>
+                                            </div>
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">State</p>
+                                                <p class="summary-value">UT</p>
+                                            </div>
+                                            <div class="summary-row flex-container">
+                                                <p class="summary-label">Country</p>
+                                                <p class="summary-value">US</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="three-third">
+                                    <h2 class="summary-subheader">Card</h2>
+                                    <div class="summary-content-wrapper flex-container">
+                                        <div class="one-third">
+                                            <div class="summary-subsection flex-container">
+                                                <div class="summary-row flex-container">
+                                                    <p class="summary-label">First</p>
+                                                    <p class="summary-value">Justin</p>
+                                                </div>
+                                                <div class="summary-row flex-container">
+                                                    <p class="summary-label">Last</p>
+                                                    <p class="summary-value">Needham</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="two-third">
+                                            <div class="summary-subsection flex-container">
+                                                <div class="summary-row summary-row-extended flex-container">
+                                                    <p class="summary-label">Card Number</p>
+                                                    <p class="summary-value">XXXX-XXXX-XXXX-5463</p>
+                                                </div>
+                                                <div class="summary-row  summary-row-extended flex-container">
+                                                    <p class="summary-label">Expiration</p>
+                                                    <p class="summary-value">04-04-2021</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-step-container summary-container">
+                            <h2 class="text checkout-header summary-header">Summary</h2>
+                            <div class="summary-header-labels flex-container hidden">
+                                <p class="summary-label summary-label-item summary-subheader">Item</p>
+                                <p class="summary-label summary-label-qty summary-subheader">Qty</p>
+                                <p class="summary-label summary-label-total summary-subheader">Total</p>
+                            </div>
+                            <div class="summary-cart-contents hidden">
+                                <div class="summary-subtotal flex-container">
+                                    <p class="summary-cart-title summary-sublabel">SubTotal</p>
+                                    <p class="summary-cart-price">$0.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-container checkout-buttons">
+                            <a class="purple-button purple-button-back">Back</a>
+                            <a class="purple-button purple-button-next">Next</a>
+                            <a class="purple-button purple-button-purchase hidden">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="{% static 'javascript/checkout_page_main.js' %}"></script>
+    <script src="{% static 'javascript/delivery_section.js' %}"></script>
+    <script src="{% static 'javascript/contact_section.js' %}"></script>
+    <script src="{% static 'javascript/payment_section.js' %}"></script>
+    <script src="{% static 'javascript/summary_section.js' %}"></script>
+    <script src="{% static 'javascript/checkout_page.js' %}"></script>
+    {% endblock content %}
+</body>
+</html>

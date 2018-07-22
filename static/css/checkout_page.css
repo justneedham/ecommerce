@@ -1,0 +1,652 @@
+/*
+**********************************************
+Header Adjustments CSS
+**********************************************
+ */
+
+.header {
+    height: 98vw;
+}
+
+.gradient-background {
+    /*min-height: 65vw;*/
+}
+
+.a-graphic-background {
+    min-height: 98vw;
+}
+
+.header-wrapper {
+    top: -99vw;
+}
+
+
+/*
+**********************************************
+Checkout CSS
+**********************************************
+ */
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    margin: 0;
+}
+
+.checkout-container {
+    background-color: #ffffff;
+    margin: 0 3vw;
+    border-radius: 0.5vw;
+    padding: 3vw;
+}
+
+.checkout-step-container {
+    border-top-style: solid;
+    border-width: 0.1vw;
+    border-color: #4A4A4A;
+    margin-bottom: 0;
+    padding: 0.5vw;
+}
+
+.checkout-header {
+    font-size: 2vw;
+}
+
+.delivery-container {
+    height: 40vw;
+}
+
+
+/**********DeliveryType**********/
+.type-container {
+    margin-top: 1vw;
+    justify-content: center;
+}
+
+.type-container-item {
+    width: 25vw;
+    padding: 2vw 0;
+}
+
+.local-image {
+    height: 11vw;
+    margin: 0 2vw 2vw 2vw;
+}
+
+.traditional-image {
+    height: 12vw;
+    margin-left: 7vw;
+}
+
+.local-container {
+    padding: 2vw;
+    background-color: #ffffff;
+    border-radius: 0.3vw;
+}
+
+.gradient-wrap {
+    background: linear-gradient(130deg, #574BCD 15%, #2999AD, #35C092, #41E975);
+    padding: 0.3vw;
+    border-radius: 0.4vw;
+}
+
+.highlighted {
+    display: block
+}
+
+.outline-hidden {
+    background: #ffffff;
+}
+
+.outline-viewable {
+    background: linear-gradient(130deg, #574BCD 15%, #2999AD, #35C092, #41E975);
+}
+
+.img-hidden {
+    display: none;
+}
+
+.img-viewable {
+    display: block;
+}
+
+.traditional-container {
+    padding: 2vw;
+    background-color: #ffffff;
+    border-radius: 0.3vw;
+}
+.type-header {
+    font-family: "Avenir Next", sans-serif;
+    font-size: 2vw;
+    font-weight: lighter;
+    color: #4A4A4A;
+    text-align: center;
+    margin: 1vw 0;
+}
+
+.type-text {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/****Address****/
+.address-container {
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    align-items: center;
+    padding: 2.5vw;
+    /*margin-top: 2vw;*/
+}
+
+.address-input-container {
+    text-align: center;
+}
+
+.address-input {
+    width: 40vw;
+}
+
+
+
+
+
+/*
+**********************************************
+Time Subsection CSS
+**********************************************
+ */
+
+/*****Local Calendar ******/
+.time-container {
+    margin-top: 1vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.calendar-key {
+    grid-column: 1/3;
+}
+
+.delivery-key {
+    align-items: center;
+}
+
+.today-key {
+    align-items: center;
+}
+
+.calendar-key {
+    margin-top: 1vw;
+}
+
+.key-text {
+    font-size: 3vw;
+}
+
+.key-bubble {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1vw;
+    border-color: #4A4A4A;
+    width: 2vw;
+    height: 2vw;
+    background: #5E5694;
+    color: transparent;
+    margin: 0 1vw;
+}
+
+.local-calendar {
+    border-style: solid;
+    border-width: 0.1vw;
+    border-color: #4A4A4A;
+    border-radius: 0.4vw;
+    width: 40vw;
+}
+
+.traditional-calendar {
+    border-style: solid;
+    border-width: 0.1vw;
+    border-color: #4A4A4A;
+    border-radius: 0.4vw;
+    width: 45vw;
+}
+
+.time-header {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: normal;
+    text-align: center;
+    color: #4A4A4A;
+    font-size: 2.5vw;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: #ffffff;
+    margin: 0;
+}
+
+.main-days-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-bottom: 0.5vw;
+}
+
+.calendar-weekday {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+    color: gray;
+    width: 1vw;
+    height: 1vw;
+    padding: 0.3vw;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: #ffffff;
+    justify-self: center;
+    margin-top: 0;
+
+}
+
+.calendar-number {
+    font-family: "Avenir Next", sans-serif;
+    font-size: 1.7vw;
+    text-align: center;
+    margin: 0.1vw;
+    padding: 1vw;
+    cursor: pointer;
+    width: 2vw;
+    height: 2vw;
+    justify-self: center;
+}
+
+.calendar-number--active {
+    border-radius: 50%;
+    border-color: #5155C9;
+    color: #ffffff;
+    background-color: #5155C9;
+    font-weight: normal;
+}
+
+/*****Time Selector ******/
+.time-selector {
+    flex-direction: column;
+    border-style: solid;
+    border-width: 0.1vw;
+    border-color: #4A4A4A;
+    border-radius: 0.4vw;
+    width: 20vw;
+    padding: 0 1vw;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.time-item {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    width: 15vw;
+    margin: 0;
+    padding: 0.4vw;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.time-item--active {
+    background-color: #5155C9;
+    color: #ffffff;
+    border-radius: 0.4vw;
+    font-weight: normal;
+}
+
+/******DeliverySummary******/
+.delivery-details {
+    flex-direction: column;
+}
+
+.summary-label {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: lighter;
+    font-size: 2vw;
+    margin: 0;
+}
+
+.summary-value {
+    font-family: "DIN Alternate", sans-serif;
+    color: #5155C9;
+    font-size: 2vw;
+    margin: 0;
+}
+
+.summary-row {
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 20vw;
+    margin: 1vw 0;
+}
+
+.summary-row-extended {
+    width: 47vw;
+}
+
+.summary-subsection {
+    flex-direction: column;
+}
+
+.summary-content-wrapper {
+    justify-content: space-between;
+}
+
+.summary-subheader {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: bold;
+    font-size: 2.5vw;
+    margin: 0;
+}
+
+.one-third {
+    width: 20vw;
+}
+.two-third {
+    width: 47vw;
+}
+
+.three-third {
+    grid-column: 1/3;
+}
+
+.payment-summary {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 6vw;
+    grid-gap: 0 4vw;
+}
+
+.summary-cart-title {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: normal;
+    color: #4A4A4A;
+    font-size: 2vw;
+    width: 30vw;
+}
+
+.summary-cart-price {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: normal;
+    color: #4A4A4A;
+    font-size: 2vw;
+    width: 10vw;
+    text-align: right;
+}
+
+.summary-cart-qty {
+    width: 5vw;
+    text-align: center;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: lighter;
+    font-size: 1.5vw;
+    color: #4A4A4A;
+}
+
+.summary-cart-row {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6vw;
+}
+
+.summary-subtotal {
+    justify-content: space-between;
+    margin: 0 6vw;
+}
+.summary-header-labels {
+    justify-content: space-between;
+    margin: 0 6vw;
+}
+
+.summary-label-item {
+    width: 30vw;
+}
+
+.summary-label-qty {
+    width: 5vw;
+    text-align: center;
+}
+
+.summary-label-total {
+    width: 10vw;
+    text-align: right;
+}
+
+
+
+.summary-sublabel {
+    font-weight: lighter;
+}
+
+.purple-button-purchase {
+    margin-left: 1vw;
+}
+
+
+
+
+
+
+
+/*
+**********************************************
+Contact Subsection CSS
+**********************************************
+ */
+
+.contact-content-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vw;
+}
+
+/*
+**********************************************
+Payment Subsection CSS
+**********************************************
+ */
+
+.payment-spinner {
+    margin: 2vw 0;
+}
+
+/***Payment Spinner***/
+.payment-spinner {
+    height: 10vw;
+}
+
+.spinner-logo {
+    width: 8vw;
+    margin: auto;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 0.4vw;
+    padding: 1vw;
+    cursor: pointer;
+}
+
+/*****Summary Logo Modifier*****/
+.summary-type-logo {
+    margin: 1.5vw auto;
+}
+
+.spinner-logo--selected {
+    border-color: #5155C9;
+    cursor: auto;
+}
+/****Payment Details*****/
+
+.payment-details {
+    justify-content: center;
+    margin: 4vw 0;
+}
+
+.payment-detail-item {
+    width: 40vw;
+}
+
+/*Card Info*/
+.card-info {
+    display: grid;
+    grid-template-areas:
+    "card-header card-header"
+    "card-first card-last"
+    "card-number card-number"
+    "card-exp card-code";
+}
+
+.card-info-item {
+    text-align: center;
+}
+
+.payment-subheader {
+    grid-area: card-header;
+    font-size: 2.5vw;
+    padding-left: 2vw;
+}
+
+.full {
+    width: 35vw;
+    margin: 0.5vw;
+    padding: 0;
+    align-self: center;
+}
+
+.half {
+    width: 15vw;
+    margin: 0.5vw;
+    padding: 0;
+    align-self: center;
+}
+
+.card-first {
+    grid-area: card-first;
+}
+
+.card-last {
+    grid-area: card-last;
+}
+
+.card-number {
+    grid-area: card-number;
+}
+
+.card-exp {
+    grid-area: card-exp;
+}
+
+.card-code {
+    grid-area: card-code;
+}
+
+/*Billing Info*/
+.billing-info {
+    display: grid;
+    grid-template-areas:
+    "bill-header bill-header"
+    "bill-street bill-street"
+    "bill-apt bill-city"
+    "bill-state bill-zip";
+}
+
+.billing-info-item {
+    text-align: center;
+}
+
+.billing-subheader {
+    grid-area: bill-header;
+    font-size: 2.5vw;
+    padding-left: 2vw;
+}
+
+.billing-street {
+    grid-area: bill-street;
+}
+
+.billing-apt {
+    grid-area: bill-apt;
+}
+
+.billing-city {
+    grid-area: bill-city;
+}
+
+.billing-state {
+    grid-area: bill-state;
+}
+
+.billing-zip {
+    grid-area: bill-zip
+}
+
+/*Username Info */
+.username-info {
+    text-align: center;
+    margin: 1vw 0;
+}
+
+.username-subheader {
+    font-size: 2.5vw;
+}
+
+
+/*
+**********************************************
+Summary Subsection CSS
+**********************************************
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***Buttons***/
+.checkout-buttons {
+    justify-content: center;
+    margin-top: 3vw
+}
+
+.purple-button-shop {
+    margin-right: 1vw;
+}
+
+.purple-button-next {
+    margin-left: 1vw;
+}
+
+.summary-container {
+    border-bottom-style: solid;
+}
+
+
+
+
+
+
+
+
+.hidden {
+    display: none
+}

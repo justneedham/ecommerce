@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/search_results_page.css' %}"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% endblock css %}
+</head>
+<body>
+     {% block content %}
+        {# ############Header############## #}
+        <div class="header">
+            <div class="gradient-background">
+                <div class="a-graphic">
+                    <div class="a-graphic-background">
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <div class="header-container combined-search">
+                    {# #####Logo##### #}
+                    <div class="logo header-item">
+                        <img class="white_logo" src="{% static 'images/logos/full_logo_white.png' %}" alt="white_logo"/>
+                    </div>
+                    <div class="flex-container initial-search header-item">
+                        <div class="search-box flex-item flex-container search-box-container">
+                             {# ###################DropDown################### #}
+                            <div class="dropdown-container">
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-item dropdown-item-top">
+                                        <button class="dropdown-button text sell">Sell</button>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <button class="dropdown-button text rent">Rent</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            {# #####SearchBar##### #}
+                            <button class="text-box search-filter-button search-box-component">
+                                Rent
+                            </button>
+                            <label class="label">Search box</label>
+                            <input class="input text-box search-box search-box-component" placeholder="Enter title, isbn or category" type="text" id="search-text-input">
+                            <button class="magnifyingglass-container search-box-component">
+                                <img class="magnifyingglass-img" src="{% static "images/chart_icons/Search Icon (White).png" %}">
+                            </button>
+                        </div>
+                    </div>
+                    {# #####Nav##### #}
+                   <nav class="nav header-item" id="xyz">
+                        <div class="icon-bar bar-one"></div>
+                        <div class="icon-bar bar-two"></div>
+                        <div class="icon-bar bar-three"></div>
+                    </nav>
+                </div>
+                {# ###################HeaderContent################### #}
+                <div class="header-content-container">
+                </div>
+            </div>
+        </div>
+         {# ######MainPageContent###### #}
+         <div class="search-results">
+            <div class="results-one result flex-container">
+                <img class="search-result-img" src="{% static "images/filler_images/search_results/book1.png" %}">
+                <a class="text search-result-txt" href="{% url 'product_detail_page' %}">The Legal Environment of Business: Texts and Cases</a>
+            </div>
+             <div class="results-two result flex-container">
+                 <img class="search-result-img" src="{% static "images/filler_images/search_results/book2.png" %}">
+                 <a class="text search-result-txt">The Legal and Regulatory Environment of Business</a>
+            </div>
+             <div class="results-three result flex-container">
+                <img class="search-result-img" src="{% static "images/filler_images/search_results/book3.png" %}">
+                <a class="text search-result-txt">Busess Law Today: Standard Editions</a>
+            </div>
+             <div class="results-four result flex-container">
+                <img class="search-result-img" src="{% static "images/filler_images/search_results/book4.png" %}">
+                <a class="text search-result-txt">Stories Mediators Tell: World Edition</a>
+            </div>
+             <div class="results-five result flex-container">
+                <img class="search-result-img" src="{% static "images/filler_images/search_results/book5.png" %}">
+                <a class="text search-result-txt">Antitrust Issues in Intellectual Property Law</a>
+            </div>
+             <div class="results-six result flex-container">
+                <img class="search-result-img" src="{% static "images/filler_images/search_results/book6.png" %}">
+                <a class="text search-result-txt">The ABA Compliance Officer's Handbook</a>
+            </div>
+             <div class="results-seven result flex-container">
+                <img class="search-result-img" src="{% static "images/filler_images/search_results/book7.png" %}">
+                <a class="text search-result-txt">Business Law Today the Essentials</a>
+            </div>
+             <div class="results-eight result flex-container">
+                <img class="search-result-img" src="{% static "images/filler_images/search_results/book8.png" %}">
+                <a class="text search-result-txt">Insider Trading Law and Development</a>
+            </div>
+         </div>
+        <script src="{% static 'javascript/search_page.js' %}"></script>
+    {% endblock content %}
+ {% block footer %}
+        {# ############Footer############## #}
+        <div class="footer">
+            <div class="logo-container footer-item">
+                <img class="logo_img" src="{% static 'images/logos/Stacked Logo Left (White).png' %}" alt="colored_logo"/>
+                <div class="copyright text-white">Alexandria Books &copy; 2018</div>
+            </div>
+            <div class="links-container footer-item">
+                <div class="column-container">
+                    <h3 class="column-header text-white">Service</h3>
+                    <ul class="column">
+                        <li class="column-item text-white">Overview</li>
+                        <li class="column-item text-white">Rent</li>
+                        <li class="column-item text-white">Sell</li>
+                    </ul>
+                </div>
+                <div class="column-container">
+                    <h3 class="column-header text-white">Company</h3>
+                    <ul class="column">
+                        <li class="column-item text-white">Contact</li>
+                        <li class="column-item text-white">About</li>
+                        <li class="column-item text-white">Jobs</li>
+                    </ul>
+                </div>
+                <div class="column-container">
+                    <h3 class="column-header text-white">Support</h3>
+                    <ul class="column">
+                        <li class="column-item text-white">Help</li>
+                        <li class="column-item text-white">FAQ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-media-container footer-item">
+                <img class="social-media-img" src="{% static 'images/social_media/instagram.png' %}" alt="instagram_logo"/>
+                <img class="social-media-img" src="{% static 'images/social_media/facebook.png' %}" alt="facebook_logo"/>
+                <img class="social-media-img" src="{% static 'images/social_media/twitter.png' %}" alt="twitter_logo"/>
+            </div>
+        </div>
+    {% endblock footer %}
+</body>
+</html>

@@ -1,0 +1,382 @@
+
+/*****Header-Content*****/
+
+    .headline {
+        margin: 0;
+        margin-bottom: 1vw;
+        padding-top: 0.4em;
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .button--rentals {
+        margin-right: 10vw;
+    }
+
+    .button--textbooks {
+        margin-left: 10vw;
+    }
+
+/*
+**********************************************
+Main CSS
+**********************************************
+ */
+
+
+/*****Main Layout CSS*****/
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.main {
+    grid-area: main;
+}
+
+/*
+-------------------------
+What's Alexandria CSS
+-------------------------
+ */
+
+#whats-alexandria-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+    #whats-alexandria-section #book-img {
+        max-width: 40vw;
+        margin: auto;
+    }
+
+    #whats-alexandria-section .header-three {
+        text-align: left;
+    }
+
+    #whats-alexandria-section .header--two {
+        text-align: left;
+    }
+
+    #buyback {
+        margin-bottom: 0;
+    }
+
+/*
+-------------------------
+Textbooks Made Simple CSS
+-------------------------
+ */
+
+#textbooks_made_simple {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+    #logo_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 6vw auto auto auto;
+    }
+
+    .fin_logo {
+        max-width: 10vw;
+        height: auto;
+        padding: 2vw;
+    }
+
+    #textbooks_made_simple .header--two {
+        text-align: left;
+    }
+
+    #textbooks_made_simple h3 {
+        text-align: left;
+    }
+
+    #delivery {
+        margin-bottom: 0;
+    }
+
+/*
+-------------------------
+How It Works CSS
+-------------------------
+ */
+
+#how-it-works {
+    display: flex;
+    flex-direction: column;
+}
+
+    #how-it-works h2 {
+        text-align: center;
+    }
+
+    .slider {
+        border-style: solid;
+        margin: auto;
+        border-color: #4A4A4A;
+        border-width: 0.3vw;
+        border-radius: 0.2em;
+        display: flex;
+        padding: 0;
+        font-family: Avenir Next, sans-serif;
+        font-size: 3vw;
+    }
+
+    .slider-button {
+        width: 10vw;
+        text-align: center;
+        cursor: pointer;
+        background-color: #ffffff;
+        border-radius: 0.1em;
+        color: #4A4A4A;
+    }
+
+    .slider-button-rent {
+        border-radius: 0.1em 0 0 0.1em;
+        border-right-style: none;
+        border-right-width: 0.3vw;
+    }
+
+    .slider-button-sell {
+        border-radius: 0 0.1em 0.1em 0;
+        border-left-style: solid;
+        border-left-width: 0.3vw;
+    }
+
+    .slider-button--active {
+        color: #ffffff;
+        border-color: #4A4A4A;
+        background-color: transparent;
+    }
+
+    #chart {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2vw;
+        margin: 2vw;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        border-style: solid;
+        border-radius: 0.5em;
+        border-width: 0.1em;
+        color: #4A4A4A;
+        justify-content: flex-end;
+        align-items: center;
+        max-width: 30vw;
+        padding: 1vw;
+        min-height: 23vw;
+    }
+
+    .box--hidden {
+        display: none;
+    }
+
+    #how-it-works .header-three {
+        margin: 0.1em;
+    }
+
+        .chart-icon {
+            max-width: 15vw;
+            height: auto;
+            justify-self: flex-start;
+            margin-bottom: 1vw;
+        }
+
+    #item-1 {
+        justify-self: right;
+    }
+
+    #item-3 {
+        justify-self: right;
+    }
+
+    #item-5 {
+        justify-self: right;
+    }
+
+    #item-7 {
+        justify-self: right;
+    }
+
+    .quote-icon {
+        max-width: 10vw;
+    }
+
+    .search-icon {
+        max-width: 7vw;
+        margin-bottom: 2vw;
+    }
+
+    .payment-icon {
+        max-width: 11vw;
+    }
+
+    .text-chart {
+        min-height: 8vw;
+    }
+
+    #cart-img {
+        max-height: 9vw;
+        width: auto;
+    }
+
+    #form-img {
+        max-height: 9vw;
+        width: auto;
+    }
+
+
+/*
+-------------------------
+Search Alexandria CSS
+-------------------------
+ */
+
+#search {
+    background: linear-gradient(130deg, #574BCD 15%, #2999AD, #35C092, #41E975);
+    display: flex;
+    flex-direction: column;
+    min-height: 30vw;
+}
+
+.content-block-search {
+    margin-top: 3vw;
+}
+
+/*
+-------------------------
+Search Alexandria CSS
+-------------------------
+ */
+
+/*.initial-search {*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+/*}*/
+
+/*.search-box {*/
+    /*width: 100%;*/
+    /*border-radius: 0 0.2em 0.2em 0;*/
+/*}*/
+
+    /*!*.search-box {*!*/
+        /*!*text-align: center;*!*/
+    /*!*}*!*/
+
+    /*.flex-item {*/
+    /*flex-grow: 1;*/
+    /*width: 60vw;*/
+    /*text-align: center;*/
+    /*margin: 1vw;*/
+    /*}*/
+
+    /*!*.initial-search .text-box {*!*/
+        /*!*width: 100%;*!*/
+    /*!*}*!*/
+
+    /*.button--search {*/
+        /*padding: 0 4vw;*/
+    /*}*/
+
+
+.initial-search {
+    flex-direction: column;
+    align-items: center;
+}
+
+/*.header-sections-container {*/
+    /*margin-top: 8vw;*/
+/*}*/
+
+.search-box {
+    width: 100%;
+    border-radius: 0 0.2em 0.2em 0;
+    position: relative;
+}
+
+.flex-item {
+flex-grow: 1;
+width: 60vw;
+text-align: center;
+margin: 1vw;
+}
+
+.button--search {
+    padding: 0 4vw;
+}
+
+    /*
+-------------------------
+Dropdown Selector CSS
+-------------------------
+ */
+
+.search-filter-button {
+    border-radius: 0.2em 0 0 0.2em;
+    margin-right: 0;
+    border: none;
+    background-color: #4A4A4A;
+    color: #ffffff;
+    font-family: "DIN Alternate", sans-serif;
+    font-size: 2vw;
+    padding: 1vw;
+    cursor: pointer;
+}
+
+.dropdown-container {
+    position: absolute;
+    display: none;
+    width: 8vw;
+    left: 0;
+    background-color: #ffffff;
+    padding: 0 1vw;
+    border-radius: 0.8em;
+    border-style: solid;
+    border-color: #4A4A4A;
+    z-index: 1;
+
+}
+.dropdown-list {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-item {
+    list-style-type: none;
+    padding: 1vw 0;
+    border-top-style: solid;
+    border-color: #4A4A4A;
+    border-width: 0.1vw;
+}
+
+.dropdown-item-top {
+    border: none;
+}
+
+.dropdown-button {
+    font-size: 2vw;
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+}
+
+.dropdown-button:hover {
+    font-weight: normal;
+}
+
+
+
+
+
